@@ -15,7 +15,7 @@ public class CreateTransactionRequest {
     private BigDecimal amount;
 
     @NotBlank(message = "Type is required")
-    @Pattern(regexp = "INCOME|EXPENSE", message = "Type must be either INCOME or EXPENSE")
+    @Pattern(regexp = "(?i)INCOME|EXPENSE", message = "Type must be INCOME or EXPENSE")
     private String type;
 
     @NotBlank(message = "Category is required")
@@ -33,7 +33,7 @@ public class CreateTransactionRequest {
     public void setAmount(BigDecimal amount) { this.amount = amount; }
 
     public String getType() { return type; }
-    public void setType(String type) { this.type = type != null ? type.toUpperCase() : null; }
+    public void setType(String type) { this.type = type; }
 
     public String getCategory() { return category; }
     public void setCategory(String category) { this.category = category; }

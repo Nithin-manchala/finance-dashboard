@@ -2,6 +2,7 @@ package com.zorvyn.finance.controller;
 
 import com.zorvyn.finance.dto.ApiResponse;
 import com.zorvyn.finance.dto.UpdateUserRoleRequest;
+import com.zorvyn.finance.dto.UpdateUserStatusRequest;
 import com.zorvyn.finance.model.User;
 import com.zorvyn.finance.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -64,20 +65,13 @@ public class UserController {
     @PatchMapping("/{id}/status")
     public ResponseEntity<?> updateStatus(
             @PathVariable Long id,
-            @RequestBody Map<String, String> body,
+            @Valid @RequestBody UpdateUserStatusRequest req,
             HttpServletRequest request) {
-
-        String newStatus = body.get("status");
-        if (newStatus == null
-                || (!newStatus.equalsIgnoreCase("ACTIVE")
-                &&  !newStatus.equalsIgnoreCase("INACTIVE"))) {
-            return ResponseEntity.badRequest()
-                    .body(ApiResponse.error("Status must be either ACTIVE or INACTIVE"));
-        }
-
         User currentUser = (User) request.getAttribute("currentUser");
-        userService.updateStatus(id, newStatus, currentUser);
+        userService.updateStatus(id, req.getStatus(), currentUser);
         return ResponseEntity.ok(ApiResponse.success(
-                "User status updated to " + newStatus.toUpperCase()));
+                "User status updated to " + req.getStatus().toUpperCase()));
     }
 }
+
+

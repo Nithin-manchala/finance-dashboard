@@ -1,0 +1,6 @@
+# .gitattributes (create in project root)
+* text=auto eol=lf
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.sql text eol=lf

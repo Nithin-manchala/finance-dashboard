@@ -7,12 +7,17 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 
 /**
  * Repository class — responsible for ALL database operations related to users.
@@ -76,7 +81,7 @@ public class UserRepository {
                 SELECT u.*
                 FROM users u
                 JOIN auth_tokens t ON u.id = t.user_id
-                WHERE t.token = ?
+               WHERE t.token = ? AND t.expires_at > NOW()
                 """;
         List<User> users = jdbcTemplate.query(sql, userRowMapper, token);
         return users.isEmpty() ? Optional.empty() : Optional.of(users.get(0));
@@ -139,14 +144,15 @@ public class UserRepository {
      * Deletes any old tokens first (one active session per user).
      * Returns the generated token string.
      */
+    @Transactional
     public String createToken(Long userId) {
-        // Delete existing tokens for this user (logout previous sessions)
         jdbcTemplate.update("DELETE FROM auth_tokens WHERE user_id = ?", userId);
-
-        // Generate a random UUID as the token
         String token = UUID.randomUUID().toString();
-        jdbcTemplate.update("INSERT INTO auth_tokens (user_id, token) VALUES (?, ?)", userId, token);
-
+        jdbcTemplate.update(
+                "INSERT INTO auth_tokens (user_id, token, expires_at) VALUES (?, ?, ?)",
+                userId, token,
+                Timestamp.valueOf(LocalDateTime.now().plusHours(24))
+        );
         return token;
     }
 
@@ -165,3 +171,4 @@ public class UserRepository {
         return count != null && count > 0;
     }
 }
+

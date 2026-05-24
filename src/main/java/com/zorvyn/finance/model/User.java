@@ -9,6 +9,7 @@ package com.zorvyn.finance.model;
  *   ANALYST → Can read + access insights/summaries
  *   ADMIN   → Full access: create, update, delete records and manage users
  */
+import com.fasterxml.jackson.annotation.JsonIgnore;
 public class User {
 
     private Long id;
@@ -42,6 +43,7 @@ public class User {
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
+    @JsonIgnore
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 

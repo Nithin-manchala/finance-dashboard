@@ -5,6 +5,8 @@ import com.zorvyn.finance.dto.RegisterRequest;
 import com.zorvyn.finance.model.User;
 import com.zorvyn.finance.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +38,8 @@ public class AuthService {
      * BCrypt is a one-way hash — you can NEVER reverse it to get the original password.
      * Even the database admin can't see real passwords.
      */
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     /**
      * Register a new user.
@@ -116,20 +119,23 @@ public class AuthService {
         userRepository.deleteToken(token);
     }
 
-    /**
-     * Creates a default admin user if no users exist in the database.
-     * Called by DataInitializer on application startup.
-     */
+    @Value("${admin.default.email:admin@finance.com}")
+    private String adminEmail;
+
+    @Value("${admin.default.password:admin123}")
+    private String adminPassword;
+
     public void createDefaultAdminIfNeeded() {
-        if (!userRepository.emailExists("admin@finance.com")) {
+        if (!userRepository.emailExists(adminEmail)) {
             User admin = new User();
-            admin.setName("System Admin");
-            admin.setEmail("admin@finance.com");
-            admin.setPassword(passwordEncoder.encode("admin123"));  // Change after first login!
+            admin.setEmail(adminEmail);
+            admin.setPassword(passwordEncoder.encode(adminPassword));
             admin.setRole("ADMIN");
             admin.setStatus("ACTIVE");
+            admin.setName("System Admin");
             userRepository.save(admin);
-            System.out.println("✅ Default admin created: admin@finance.com / admin123");
+            // Don't print credentials to logs!
         }
     }
 }
+

@@ -21,7 +21,9 @@ public class HomeController {
         Map<String, String> endpoints = new HashMap<>();
         endpoints.put("Register", "POST /api/auth/register");
         endpoints.put("Login", "POST /api/auth/login");
-        endpoints.put("Dashboard", "GET /api/dashboard");
+        endpoints.put("Dashboard summary", "GET /api/dashboard/summary");
+        endpoints.put("Category totals",   "GET /api/dashboard/categories");
+        endpoints.put("Monthly trends",    "GET /api/dashboard/trends/monthly");
         
         response.put("available_endpoints", endpoints);
         

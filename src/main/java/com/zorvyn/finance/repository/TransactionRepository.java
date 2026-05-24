@@ -194,9 +194,9 @@ public class TransactionRepository {
                 SELECT DATE_FORMAT(date, '%Y-%m') AS month, type, SUM(amount) AS total
                 FROM transactions
                 WHERE is_deleted = FALSE
+                  AND date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH)
                 GROUP BY month, type
-                ORDER BY month DESC
-                LIMIT 24
+                ORDER BY month ASC
                 """;
         return jdbcTemplate.queryForList(sql);
     }

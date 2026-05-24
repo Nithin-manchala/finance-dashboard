@@ -19,8 +19,9 @@
     <description>Finance Data Processing and Access Control Backend</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>23</java.version>  <!-- match your actual JDK -->
     </properties>
+
 
     <dependencies>
 
@@ -28,6 +29,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!-- Spring Boot JDBC: Gives us JdbcTemplate to run SQL queries -->

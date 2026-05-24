@@ -48,7 +48,8 @@ public class AuthFilter extends OncePerRequestFilter {
      */
     private static final List<String> PUBLIC_PATHS = List.of(
             "/api/auth/login",
-            "/api/auth/register"
+            "/api/auth/register",
+            "/"
     );
 
     @Override
@@ -57,10 +58,8 @@ public class AuthFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
 
-        String path = request.getRequestURI();
-
-        // ── Skip auth for public endpoints ─────────────────────────────────
-        if (PUBLIC_PATHS.stream().anyMatch(path::startsWith)) {
+        String path = request.getServletPath();  // normalized, no query string
+        if (PUBLIC_PATHS.stream().anyMatch(path::equals)) {
             filterChain.doFilter(request, response);  // Pass through without checking
             return;
         }
@@ -119,3 +118,4 @@ public class AuthFilter extends OncePerRequestFilter {
         response.getWriter().write(objectMapper.writeValueAsString(body));
     }
 }
+
