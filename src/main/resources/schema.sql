@@ -19,12 +19,13 @@ CREATE TABLE IF NOT EXISTS users (
 -- AUTH TOKENS TABLE
 -- Each login generates a UUID token stored here.
 -- When a user logs out, their token is deleted.
+-- NEW — safe version that works on all MySQL versions
 CREATE TABLE IF NOT EXISTS auth_tokens (
     id         BIGINT AUTO_INCREMENT PRIMARY KEY,
     user_id    BIGINT       NOT NULL,
     token      VARCHAR(255) NOT NULL UNIQUE,
-    created_at TIMESTAMP   DEFAULT CURRENT_TIMESTAMP,
-    expires_at TIMESTAMP   NOT NULL DEFAULT (NOW() + INTERVAL 24 HOUR),
+    created_at TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    expires_at TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
