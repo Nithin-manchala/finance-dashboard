@@ -26,9 +26,21 @@ public class FinanceDashboardApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(FinanceDashboardApplication.class, args);
+        
+        // Get environment details
+        String port = System.getenv("PORT");
+        if (port == null) port = "8080";
+        String railwayEnv = System.getenv("RAILWAY_ENVIRONMENT");
+        
         System.out.println("\n========================================================");
         System.out.println("  Finance Dashboard API is running!");
-        System.out.println("  Base URL : http://localhost:8080/api");
+        System.out.println("  Port: " + port);
+        if (railwayEnv != null) {
+            System.out.println("  Environment: Railway - " + railwayEnv);
+        } else {
+            System.out.println("  Environment: Local Development");
+        }
+        System.out.println("  Base URL : /api");
         System.out.println("  Default Admin : admin@finance.com / admin123");
         System.out.println("========================================================\n");
     }

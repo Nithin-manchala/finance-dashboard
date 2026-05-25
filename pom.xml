@@ -19,7 +19,7 @@
     <description>Finance Data Processing and Access Control Backend</description>
 
     <properties>
-        <java.version>23</java.version>  <!-- match your actual JDK -->
+        <java.version>17</java.version>  <!-- Railway compatible LTS version -->
     </properties>
 
 

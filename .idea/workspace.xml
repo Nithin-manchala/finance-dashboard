@@ -4,90 +4,95 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e3a6672-746d-4f1f-8ca6-6e96cae9bb74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/dto/UpdateUserStatusRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="67210ef6-1681-4aa0-a22a-afa2106f65e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/railway.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/config/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/FinanceDashboardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/FinanceDashboardApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/dto/CreateTransactionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/dto/CreateTransactionRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/repository/TransactionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zorvyn/finance/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/FinanceDashboardApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/FinanceDashboardApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/config/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/config/DataInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/DashboardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/TransactionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/ApiResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/CreateTransactionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/CreateTransactionRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/UpdateTransactionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/UpdateTransactionRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/UpdateUserRoleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/dto/UpdateUserRoleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/AccessDeniedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/AccessDeniedException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/exception/ResourceNotFoundException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/model/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/model/Transaction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/repository/TransactionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/repository/TransactionRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/repository/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/DashboardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/DashboardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/TransactionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zorvyn/finance/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zorvyn/finance/FinanceDashboardApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zorvyn/finance/FinanceDashboardApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="3BvPFXwfjB8MDRRUzs7FxVLvRuG" />
+  <component name="ProjectId" id="3ECIruYytOCvqvmk1ExTCnS5Xy2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.FinanceDashboardApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/springApps/finance-dashboard",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "last_opened_file_path": "D:/springApps/finance-dashboard-fixed"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="finance-dashboard-fixed" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="finance-dashboard-fixed" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e3a6672-746d-4f1f-8ca6-6e96cae9bb74" name="Changes" comment="" />
-      <created>1775366469055</created>
+      <changelist id="67210ef6-1681-4aa0-a22a-afa2106f65e4" name="Changes" comment="" />
+      <created>1779676326549</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1775366469055</updated>
+      <updated>1779676326549</updated>
     </task>
     <servers />
   </component>
